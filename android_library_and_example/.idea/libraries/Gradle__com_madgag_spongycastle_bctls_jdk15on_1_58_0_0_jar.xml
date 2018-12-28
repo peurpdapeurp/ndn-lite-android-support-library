@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.madgag.spongycastle:bctls-jdk15on:1.58.0.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.madgag.spongycastle/bctls-jdk15on/1.58.0.0/ba1bb06659cf5bb4a5df4e928381928faa9bd733/bctls-jdk15on-1.58.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.madgag.spongycastle/bctls-jdk15on/1.58.0.0/3691306d37872ca20b7530362636c89c23dac18/bctls-jdk15on-1.58.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,12 @@
+Archive member included to satisfy reference by file (symbol)
+
+C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.12/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc_asm.o)
+                              Output/ndn_lite_nRF52840_example Debug/Obj/bignum.o (__aeabi_uldivmod)
+C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.12/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                              Output/ndn_lite_nRF52840_example Debug/Obj/nrf_log_str_formatter.o (isprint)
+C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.12/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
+                              Output/ndn_lite_nRF52840_example Debug/Obj/nrf_crypto_aes_shared.o (memcpy)
+C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.12/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc.o)
+                              C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.12/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o) (__heap_lock)
+C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.12/lib/libdebugio_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libdebugio.o)
+                              Output/ndn_lite_nRF52840_example Debug/Obj/thumb_crt0.o (debug_fopen)
