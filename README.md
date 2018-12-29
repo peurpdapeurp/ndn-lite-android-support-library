@@ -70,11 +70,11 @@ If you would like to use the ndn-lite-android-support-library in your Android ap
 2) Inside of your Android Studio project, go to File > New > Module
 3) Select to "Import .JAR/.AAR Package"
 4) When selecting the .aar file to import, navigate to 
-    <root repository directory>/android_library_and_example/ndnlitesupport/build/outputs/aar
+    <root repository directory>/android_library_and_example/ndnlitesupport/build/outputs/aar/ndnlitesupport-debug.aar
 5) After pressing Finish, go to File > Project Structure, and go to the Modules section. Click on your main application
     module, and go to the dependencies tab.
 6) Inside of the dependencies tab, click on the green plus sign on the right hand side of the window, and select to
     add a "Module dependency".
-7) Select android_ble_helpers from the window that pops up.
+7) Select ndnlitesupport from the window that pops up.
 
 You should now be able to use the library in your application.
