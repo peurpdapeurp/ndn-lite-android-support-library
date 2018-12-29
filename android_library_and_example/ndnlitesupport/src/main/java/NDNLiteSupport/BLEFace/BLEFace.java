@@ -25,6 +25,8 @@ import java.util.UUID;
 
 import NDNLiteSupport.NDNLiteAndroidSupportConsts;
 
+import static NDNLiteSupport.transport.ble.BLECentralTransport.MAX_CHARACTERISTIC_VALUE_SIZE;
+
 public class BLEFace extends Face {
 
     // TAG for logging.
@@ -182,6 +184,10 @@ public class BLEFace extends Face {
             else {
                 Log.e(TAG, "BLEFace onSendDataResult returned failure for send code " +
                         sendCode + ", error code: " + resultCode);
+
+                if (resultCode.equals(BLECentralTransport.BCTResultCode.ATTEMPTED_TO_SEND_DATA_LARGER_THAN_MAX_PAYLOAD_SIZE_IN_ONE_CHARACTERISTIC_WRITE)) {
+                    BLEManager.getInstance().requestMtu(bluetoothGatt.getDevice().getAddress(), MAX_CHARACTERISTIC_VALUE_SIZE);
+                }
             }
         }
 

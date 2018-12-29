@@ -166,6 +166,30 @@ public class BLEManager {
 
     }
 
+    public void requestMtu(String deviceAddress, int newMtu) {
+        if (!bleTransports_.containsKey(deviceAddress)) {
+            LogHelpers.LogWarning(TAG, "In requestMtu, device address " + deviceAddress + " not found in " +
+                    "bleTransports_.");
+            return;
+        }
+
+        BLECentralTransport transport = bleTransports_.get(deviceAddress);
+
+        if (transport.currentConnectionState_ == null) {
+            LogHelpers.LogWarning(TAG, "in requestMtu, current connection state of transport was null.");
+            return;
+        }
+
+        if (!transport.currentConnectionState_.equals(BLECentralTransport.ConnectionState.STATE_CONNECTED) &&
+                !transport.currentConnectionState_.equals(BLECentralTransport.ConnectionState.STATE_MTU_NEGOTIATED)) {
+            LogHelpers.LogWarning(TAG, "in requestMtu, current connection state of transport was: " +
+            transport.currentConnectionState_);
+            return;
+        }
+
+        transport.requestMtu(newMtu);
+    }
+
     public void disconnect(String deviceAddress) {
         BLECentralTransport currentTransport = bleTransports_.get(deviceAddress);
         currentTransport.disconnect();

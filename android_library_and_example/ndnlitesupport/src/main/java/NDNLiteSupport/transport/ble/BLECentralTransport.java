@@ -939,6 +939,17 @@ public class BLECentralTransport {
 
     }
 
+    public void requestMtu(int newMtu) {
+        if (bluetoothAdapter_ == null) {
+            Log.e(TAG, "BluetoothAdapter not initialized.");
+            //returnConnectResult(BCTResultCode.BLUETOOTH_ADAPTER_NOT_INITIALIZED);
+            return;
+        }
+
+        if (gatt_ == null)
+            gatt_.requestMtu(newMtu);
+    }
+
     public void disconnect() {
 
         if (bluetoothAdapter_ == null) {

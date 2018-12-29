@@ -302,51 +302,7 @@
         <file file_name="Application/ndn_standalone/ndn-enums.h" />
         <file file_name="Application/ndn_standalone/ndn-error-code.h" />
         <file file_name="Application/ndn_standalone/ndn-service.h" />
-        <folder Name="adaptation">
-          <folder Name="ndn-nrf-ble-adaptation">
-            <folder Name="nrf-sdk-ble-advertising">
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-advertising/nrf-sdk-ble-adv.c" />
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-advertising/nrf-sdk-ble-adv.h" />
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-advertising/nrf-sdk-ble-adv-defs.h" />
-            </folder>
-            <folder Name="nrf-sdk-ble-conn-params">
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-conn-params/nrf-sdk-ble-conn-params.c" />
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-conn-params/nrf-sdk-ble-conn-params.h" />
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-conn-params/nrf-sdk-ble-conn-params-defs.h" />
-            </folder>
-            <folder Name="nrf-sdk-ble-gap">
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-gap/nrf-sdk-ble-gap.c" />
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-gap/nrf-sdk-ble-gap.h" />
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-gap/nrf-sdk-ble-gap-defs.h" />
-            </folder>
-            <folder Name="nrf-sdk-ble-gatt">
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-gatt/nrf-sdk-ble-gatt.c" />
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-gatt/nrf-sdk-ble-gatt.h" />
-            </folder>
-            <folder Name="nrf-sdk-ble-ndn-lite-ble-unicast-transport">
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-ndn-lite-ble-unicast-transport/nrf-sdk-ble-ndn-lite-ble-unicast-service.c" />
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-ndn-lite-ble-unicast-transport/nrf-sdk-ble-ndn-lite-ble-unicast-service.h" />
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-ndn-lite-ble-unicast-transport/nrf-sdk-ble-ndn-lite-ble-unicast-transport.c" />
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-ndn-lite-ble-unicast-transport/nrf-sdk-ble-ndn-lite-ble-unicast-transport.h" />
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-ndn-lite-ble-unicast-transport/nrf-sdk-ble-ndn-lite-ble-unicast-transport-defs.h" />
-            </folder>
-            <folder Name="nrf-sdk-ble-scanning">
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-scanning/nrf-sdk-ble-scan.c" />
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-scanning/nrf-sdk-ble-scan.h" />
-            </folder>
-            <folder Name="nrf-sdk-ble-stack">
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-stack/nrf-sdk-ble-stack.c" />
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-stack/nrf-sdk-ble-stack.h" />
-              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-stack/nrf-sdk-ble-stack-defs.h" />
-            </folder>
-            <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-consts.h" />
-            <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-error-check.h" />
-            <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/logger.h" />
-          </folder>
-        </folder>
         <folder Name="app-support">
-          <file file_name="Application/ndn_standalone/app-support/service-discovery.c" />
-          <file file_name="Application/ndn_standalone/app-support/service-discovery.h" />
           <folder Name="bootstrapping">
             <folder Name="secure-sign-on-files">
               <folder Name="secure-sign-on">
@@ -359,7 +315,6 @@
                 <folder Name="variants">
                   <folder Name="basic">
                     <folder Name="security">
-                      <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/security/sign-on-basic-sec-consts.h" />
                       <folder Name="detail">
                         <folder Name="detail-aes">
                           <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/security/detail/detail-aes/aes-nrf-crypto-impl.c" />
@@ -410,7 +365,75 @@
               </folder>
             </folder>
           </folder>
+          <file file_name="Application/ndn_standalone/app-support/access-control.c" />
+          <file file_name="Application/ndn_standalone/app-support/access-control.h" />
           <file file_name="Application/ndn_standalone/app-support/bootstrapping.h" />
+          <file file_name="Application/ndn_standalone/app-support/service-discovery.c" />
+          <file file_name="Application/ndn_standalone/app-support/service-discovery.h" />
+        </folder>
+        <folder Name="security">
+          <file file_name="Application/ndn_standalone/security/aes.h" />
+          <file file_name="Application/ndn_standalone/security/crypto-key.h" />
+          <file file_name="Application/ndn_standalone/security/key-storage.c" />
+          <file file_name="Application/ndn_standalone/security/key-storage.h" />
+          <file file_name="Application/ndn_standalone/security/random.h" />
+          <file file_name="Application/ndn_standalone/security/sign-verify.h" />
+          <folder Name="ndn-lite-default-back">
+            <folder Name="micro-ecc">
+              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/asm_arm.inc" />
+              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/asm_arm_mult_square.inc" />
+              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/asm_avr.inc" />
+              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/asm_avr_mult_square.inc" />
+              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/curve-specific.inc" />
+              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/platform-specific.inc" />
+              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/types.h" />
+              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/uECC.c" />
+              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/uECC.h" />
+              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/uECC_vli.h" />
+            </folder>
+          </folder>
+        </folder>
+        <folder Name="adaptation">
+          <folder Name="ndn-nrf-ble-adaptation">
+            <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/logger.h" />
+            <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-consts.h" />
+            <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-error-check.h" />
+            <folder Name="nrf-sdk-ble-advertising">
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-advertising/nrf-sdk-ble-adv.c" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-advertising/nrf-sdk-ble-adv.h" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-advertising/nrf-sdk-ble-adv-defs.h" />
+            </folder>
+            <folder Name="nrf-sdk-ble-conn-params">
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-conn-params/nrf-sdk-ble-conn-params.c" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-conn-params/nrf-sdk-ble-conn-params.h" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-conn-params/nrf-sdk-ble-conn-params-defs.h" />
+            </folder>
+            <folder Name="nrf-sdk-ble-gap">
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-gap/nrf-sdk-ble-gap.c" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-gap/nrf-sdk-ble-gap.h" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-gap/nrf-sdk-ble-gap-defs.h" />
+            </folder>
+            <folder Name="nrf-sdk-ble-gatt">
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-gatt/nrf-sdk-ble-gatt.c" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-gatt/nrf-sdk-ble-gatt.h" />
+            </folder>
+            <folder Name="nrf-sdk-ndn-lite-ble-unicast-transport">
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-ndn-lite-ble-unicast-transport/nrf-sdk-ble-ndn-lite-ble-unicast-service.c" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-ndn-lite-ble-unicast-transport/nrf-sdk-ble-ndn-lite-ble-unicast-service.h" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-ndn-lite-ble-unicast-transport/nrf-sdk-ble-ndn-lite-ble-unicast-transport.c" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-ndn-lite-ble-unicast-transport/nrf-sdk-ble-ndn-lite-ble-unicast-transport.h" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-ndn-lite-ble-unicast-transport/nrf-sdk-ble-ndn-lite-ble-unicast-transport-defs.h" />
+            </folder>
+            <folder Name="nrf-sdk-ble-scanning">
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-scanning/nrf-sdk-ble-scan.c" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-scanning/nrf-sdk-ble-scan.h" />
+            </folder>
+            <folder Name="nrf-sdk-ble-stack">
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-stack/nrf-sdk-ble-stack.c" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-stack/nrf-sdk-ble-stack.h" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-stack/nrf-sdk-ble-stack-defs.h" />
+            </folder>
+          </folder>
         </folder>
         <folder Name="encode">
           <file file_name="Application/ndn_standalone/encode/data.c" />
@@ -421,6 +444,7 @@
           <file file_name="Application/ndn_standalone/encode/encoder.h" />
           <file file_name="Application/ndn_standalone/encode/fragmentation-support.h" />
           <file file_name="Application/ndn_standalone/encode/interest.c" />
+          <file file_name="Application/ndn_standalone/encode/interest.h" />
           <file file_name="Application/ndn_standalone/encode/metainfo.c" />
           <file file_name="Application/ndn_standalone/encode/metainfo.h" />
           <file file_name="Application/ndn_standalone/encode/name.c" />
@@ -451,28 +475,6 @@
           <file file_name="Application/ndn_standalone/forwarder/memory-pool.h" />
           <file file_name="Application/ndn_standalone/forwarder/pit.c" />
           <file file_name="Application/ndn_standalone/forwarder/pit.h" />
-        </folder>
-        <folder Name="security">
-          <file file_name="Application/ndn_standalone/security/aes.h" />
-          <file file_name="Application/ndn_standalone/security/crypto-key.h" />
-          <file file_name="Application/ndn_standalone/security/key-storage.c" />
-          <file file_name="Application/ndn_standalone/security/key-storage.h" />
-          <file file_name="Application/ndn_standalone/security/random.h" />
-          <file file_name="Application/ndn_standalone/security/sign-verify.h" />
-          <folder Name="ndn-lite-default-back">
-            <folder Name="micro-ecc">
-              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/asm_arm.inc" />
-              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/asm_arm_mult_square.inc" />
-              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/asm_avr.inc" />
-              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/asm_avr_mult_square.inc" />
-              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/curve-specific.inc" />
-              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/platform-specific.inc" />
-              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/types.h" />
-              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/uECC.c" />
-              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/uECC.h" />
-              <file file_name="Application/ndn_standalone/security/ndn-lite-default-back/micro-ecc/uECC_vli.h" />
-            </folder>
-          </folder>
         </folder>
       </folder>
     </folder>

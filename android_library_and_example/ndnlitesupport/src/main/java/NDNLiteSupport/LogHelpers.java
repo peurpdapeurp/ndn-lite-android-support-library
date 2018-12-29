@@ -10,6 +10,8 @@ public class LogHelpers {
         Log.d(TAG, message);
     }
 
+    public static void LogWarning(String TAG, String message) { Log.w(TAG, message); }
+
     public static void LogByteArrayDebug(String TAG, String message, byte[] buffer) {
         Blob bufferBlob = new Blob(buffer);
         String bufferString = bufferBlob.toHex();
