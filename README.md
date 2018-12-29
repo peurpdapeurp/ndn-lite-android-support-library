@@ -31,12 +31,7 @@ c. More Information Regarding the Basic BLE Communication Support
 The main lower level BLE communication functionality offered by the library are scanning for other devices and 
 connecting / communicating with them through BLE unicast connections.
 
-i) Scanning
-
-The scanning functionality can be customized, or simply used with default values. The parameters
-of the BLEScanner class are as follows:
-
-ii) BLE Unicast Actions
+The scanning functionality can be customized, or simply used with default values.
 
 The lower level BLE communication support of the library facilitates communication with BLE devices through 
 a predefined "data transfer" characteristic, which it is expected that the BLE devices being connected
