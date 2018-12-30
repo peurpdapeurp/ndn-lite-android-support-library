@@ -58,6 +58,11 @@ of the library:
         
 II. INSTALLATION
 ------------------------------------------------------------------------------------------------
+
+***NOTE: You should clone the repository with the --recursive option; see section b) of installation for why.
+
+a) Using the NDN Lite Android Support library for your Android application
+
 If you would like to use the ndn-lite-android-support-library in your Android application, you can follows these steps
 (it is assumed that you are using Android Studio):
 
@@ -81,10 +86,24 @@ If you would like to use the ndn-lite-android-support-library in your Android ap
 
 You should now be able to use the library in your Android application.
 
-A NOTE ON USING THE nRF52840 EXAMPLE:
-        In order to use the nRF52840 example, you will have to change the root directory of the SDK in the .emProject file.
-        To do this, you can open the ndn_lite_nRF52840_example.emProject file with a text editor and search and replace 
-        all of the following directories with the appropriate directories for your working environment:
-                - "C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96" should be replaced with the path to the nRF SDK on your machine.
-                - "C:/Users/Rena Li/Desktop/ndn-lite-android-support-library/nRF52840_example" should be replaced with the path to the
-                                                                                               nRF example application on your machine.
+b) Getting the nRF52840 example started with Segger Embedded Studio, the nRF SDK, and the NDN-Lite library
+
+The nRF52840 example included in the repository is based on the Segger Embedded Studio IDE, version 15.2.0 of the nRF SDK, and the NDN-Lite library.
+
+The NDN-Lite library is included in the example, but will not be downloaded unless you clone this repository using the --recursive option, so you should do that if you do not want to download the ndn-lite library manually. If you do want to download the ndn-lite library manually, you can do a "git clone https://github.com/Zhiyi-Zhang/ndn_standalone" in the "Application" directory of the example (the ndn_standalone folder should be at the same directory level as main.c).
+
+To download the specific version of nRF SDK that the example uses, you can visit this link: http://developer.nordicsemi.com/nRF5_SDK/nRF5_SDK_v15.x.x/nRF5_SDK_15.2.0_9412b96.zip
+
+You will also have to make changes to several paths in the project to use the example on your machine.
+
+You will have to change the root directory of the nRF SDK in the .emProject file.
+To do this, you can open the ndn_lite_nRF52840_example.emProject file with a text editor and search and replace 
+all of the following directories with the appropriate directories for your working environment:
+        - "C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96" should be replaced with the path to the nRF SDK on your machine.
+        - "C:/Users/Rena Li/Desktop/ndn-lite-android-support-library/nRF52840_example" should be replaced with the path to the
+            nRF example application on your machine.
+            
+***Note: If you run into issues where includes in the NDN-Lite library like "#include <uECC.h>" and "#include "nrf_ble_scan.h",
+it is likely that you did not properly edit the paths as specified above.
+
+
