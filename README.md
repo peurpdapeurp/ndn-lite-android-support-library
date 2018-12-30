@@ -63,7 +63,9 @@ If you would like to use the ndn-lite-android-support-library in your Android ap
 
 1) Clone this repository to your machine.
 2) Open the android_library_and_example application in Android Studio.
-3) Go to the Gradle tool window (if you cannot see it, go to View > Tool Windows > Gradle)
+3) Go to the Gradle tool window
+        - if you cannot see the Gradle tool window, go to View > Tool Windows > Gradle
+        - if you see "nothing to show" in the Gradle tool window, clean and rebuild your project and do a gradle sync
 4) In the Gradle tool window, go to android_library_and_example > ndnlitesupport > build, and double click on assemble.
 5) After assembling has finished, you should have an aar file for the ndnlitesupport library in the following directory:
         <root repository directory>/android_library_and_example/ndnlitesupport/build/outputs/aar
