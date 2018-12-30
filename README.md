@@ -72,4 +72,12 @@ If you would like to use the ndn-lite-android-support-library in your Android ap
     add a "Module dependency".
 7) Select ndnlitesupport from the window that pops up.
 
-You should now be able to use the library in your application.
+You should now be able to use the library in your Android application.
+
+A NOTE ON USING THE nRF52840 EXAMPLE:
+        In order to use the nRF52840 example, you will have to change the root directory of the SDK in the .emProject file.
+        To do this, you can open the ndn_lite_nRF52840_example.emProject file with a text editor and search and replace 
+        all of the following directories with the appropriate directories for your working environment:
+                - "C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96" should be replaced with the path to the nRF SDK on your machine.
+                - "C:/Users/Rena Li/Desktop/ndn-lite-android-support-library/nRF52840_example" should be replaced with the path to the
+                                                                                               nRF example application on your machine.
