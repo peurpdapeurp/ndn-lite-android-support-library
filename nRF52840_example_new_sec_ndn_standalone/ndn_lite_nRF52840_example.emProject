@@ -1,0 +1,548 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution
+  Name="ndn_lite_nRF52840_example_new_sec_ndn_standalone"
+  target="8"
+  version="2">
+  <configuration
+    Name="Release"
+    c_preprocessor_definitions="NDEBUG"
+    gcc_optimization_level="Optimize For Size" />
+  <configuration
+    Name="Debug"
+    c_preprocessor_definitions="DEBUG; DEBUG_NRF"
+    gcc_optimization_level="None" />
+  <configuration
+    Name="Common"
+    linker_section_placement_file="$(ProjectDir)/flash_placement.xml" />
+  <project Name="ndn_lite_nRF52840_example_new_sec_ndn_standalone">
+    <configuration
+      Name="Common"
+      arm_architecture="v7EM"
+      arm_core_type="Cortex-M4"
+      arm_endian="Little"
+      arm_fp_abi="Hard"
+      arm_fpu_type="FPv4-SP-D16"
+      arm_linker_heap_size="8192"
+      arm_linker_process_stack_size="0"
+      arm_linker_stack_size="8192"
+      arm_linker_treat_warnings_as_errors="No"
+      arm_simulator_memory_simulation_parameter="RWX 00000000,00100000,FFFFFFFF;RWX 20000000,00010000,CDCDCDCD"
+      arm_target_device_name="nRF52840_xxAA"
+      arm_target_interface_type="SWD"
+      c_preprocessor_definitions="BOARD_PCA10056 ;CONFIG_GPIO_AS_PINRESET;FLOAT_ABI_HARD;INITIALIZE_USER_SECTIONS;NO_VTOR_CONFIG;NRF52840_XXAA;NRF_SD_BLE_API_VERSION=6;S140;SOFTDEVICE_PRESENT;SWI_DISABLE0;MBEDTLS_CONFIG_FILE=&quot;nrf_crypto_mbedtls_config.h&quot;;NRF_CRYPTO_MAX_INSTANCE_COUNT=1;uECC_ENABLE_VLI_API=0;uECC_OPTIMIZATION_LEVEL=3;uECC_SQUARE_FUNC=0;uECC_SUPPORT_COMPRESSED_POINT=0;uECC_VLI_NATIVE_LITTLE_ENDIAN=1;BOARD_PCA10056 ;CONFIG_GPIO_AS_PINRESET;FLOAT_ABI_HARD;INITIALIZE_USER_SECTIONS;MBEDTLS_CONFIG_FILE=&quot;nrf_crypto_mbedtls_config.h&quot;;NO_VTOR_CONFIG;NRF52840_XXAA;NRF_CRYPTO_MAX_INSTANCE_COUNT=1;uECC_ENABLE_VLI_API=0;uECC_OPTIMIZATION_LEVEL=3;uECC_SQUARE_FUNC=0;uECC_SUPPORT_COMPRESSED_POINT=0;uECC_VLI_NATIVE_LITTLE_ENDIAN=1"
+      c_user_include_directories=".;./Application;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_advertising;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_dtm;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_racp;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_ancs_c;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_ans_c;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_bas;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_bas_c;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_cscs;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_cts_c;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_dfu;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_dis;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_gls;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_hids;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_hrs;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_hrs_c;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_hts;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_ias;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_ias_c;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_lbs;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_lbs_c;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_lls;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_nus;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_nus_c;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_rscs;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_rscs_c;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_tps;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/common;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/nrf_ble_gatt;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/nrf_ble_qwr;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/boards;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/drivers_nrf/usbd;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/atomic;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/atomic_fifo;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/atomic_flags;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/balloc;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/bootloader/ble_dfu;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/bsp;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/button;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/cli;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crc16;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crc32;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/csense;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/csense_drv;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/delay;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/ecc;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/experimental_section_vars;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/experimental_task_manager;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/fds;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/fstorage;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/gfx;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/gpiote;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/hardfault;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/hci;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/led_softblink;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/log;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/log/src;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/low_power_pwm;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/mem_manager;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/memobj;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/mpu;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/mutex;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/pwm;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/pwr_mgmt;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/queue;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/ringbuf;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/scheduler;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/sdcard;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/sensorsim;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/slip;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/sortlist;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/spi_mngr;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/stack_guard;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/strerror;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/svc;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/timer;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/twi_mngr;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/twi_sensor;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/class/audio;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/class/cdc;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/class/cdc/acm;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/class/hid;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/class/hid/generic;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/class/hid/kbd;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/class/hid/mouse;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/class/msc;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/util;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/conn_hand_parser;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/conn_hand_parser/ac_rec_parser;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/conn_hand_parser/ble_oob_advdata_parser;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/conn_hand_parser/le_oob_rec_parser;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/connection_handover/ac_rec;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/connection_handover/ble_oob_advdata;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/connection_handover/ble_pair_lib;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/connection_handover/ble_pair_msg;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/connection_handover/common;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/connection_handover/ep_oob_rec;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/connection_handover/hs_rec;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/connection_handover/le_oob_rec;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/generic/message;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/generic/record;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/launchapp;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/parser/message;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/parser/record;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/text;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/uri;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/t2t_lib;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/t2t_lib/hal_t2t;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/t2t_parser;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/t4t_lib;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/t4t_lib/hal_t4t;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/t4t_parser/apdu;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/t4t_parser/cc_file;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/t4t_parser/hl_detection_procedure;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/nfc/t4t_parser/tlv;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/softdevice/common;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/nrf52;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/toolchain/cmsis/include;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/fprintf;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/segger_rtt;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/utf_converter;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/integration/nrfx;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/integration/nrfx/legacy;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/include;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/hal;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk;../config;../../../config;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/boards;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/drivers_nrf/nrf_soc_nosd;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/atomic;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/balloc;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310_bl;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cifra;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/mbedtls;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/micro_ecc;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/nrf_hw;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/nrf_sw;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/oberon;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/delay;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/experimental_section_vars;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/log;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/log/src;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/mem_manager;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/memobj;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/mutex;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/queue;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/ringbuf;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/stack_info;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/strerror;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/util;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/toolchain/cmsis/include;../../..;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/cifra_AES128-EAX;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/fprintf;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/include;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/micro-ecc/micro-ecc;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/nrf_cc310/include;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/nrf_oberon;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/nrf_oberon/include;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/nrf_tls/mbedtls/nrf_crypto/config;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/segger_rtt;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/integration/nrfx;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/integration/nrfx/legacy;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/include;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/hal;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk;../config;../../../config;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/boards;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/drivers_nrf/nrf_soc_nosd;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/atomic;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/balloc;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/bsp;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310_bl;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cifra;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/mbedtls;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/micro_ecc;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/nrf_hw;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/nrf_sw;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/oberon;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/delay;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/experimental_section_vars;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/log;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/log/src;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/mem_manager;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/memobj;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/mutex;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/queue;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/ringbuf;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/stack_info;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/strerror;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/util;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/toolchain/cmsis/include;../../..;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/cifra_AES128-EAX;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/fprintf;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/include;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/micro-ecc/micro-ecc;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/nrf_cc310/include;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/nrf_oberon;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/nrf_oberon/include;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/nrf_tls/mbedtls/nrf_crypto/config;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/segger_rtt;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/integration/nrfx;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/integration/nrfx/legacy;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/include;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/hal;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk;../config;C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96\\components\\ble\\nrf_ble_scan;C:/Users/Rena Li/Desktop/ndn-lite-android-support-library/nRF52840_example_new_sec_ndn_standalone/Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation;C:/Users/Rena Li/Desktop/ndn-lite-android-support-library/nRF52840_example_new_sec_ndn_standalone/Application/ndn_standalone/security/sec-lib/micro-ecc;C:\\Users\\Rena Li\\Desktop\\ndn-lite-android-support-library\\nRF52840_example_new_sec_ndn_standalone\\Application\\ndn_standalone\\app-support\\bootstrapping\\secure-sign-on-files\\secure-sign-on\\variants\\basic;C:\\Users\\Rena Li\\Desktop\\ndn-lite-android-support-library\\nRF52840_example_new_sec_ndn_standalone\\Application\\ndn_standalone\\app-support\\bootstrapping\\secure-sign-on-files\\secure-sign-on\\variants\\basic\\sign-on-basic-client-consts.h"
+      debug_additional_load_file="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/hex/s140_nrf52_6.1.0_softdevice.hex"
+      debug_register_definition_file="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf52840.svd"
+      debug_start_from_entry_point_symbol="No"
+      debug_target_connection="J-Link"
+      gcc_debugging_level="Level 3"
+      gcc_entry_point="Reset_Handler"
+      linker_output_format="hex"
+      linker_printf_fmt_level="long"
+      linker_printf_width_precision_supported="Yes"
+      linker_section_placement_file="$(ProjectDir)/flash_placement.xml"
+      linker_section_placement_macros="FLASH_PH_START=0x0;FLASH_PH_SIZE=0x100000;RAM_PH_START=0x20000000;RAM_PH_SIZE=0x40000;FLASH_START=0x26000;FLASH_SIZE=0xda000;RAM_START=0x20003660;RAM_SIZE=0x3ddd0"
+      linker_section_placements_segments="FLASH RX 0x0 0x100000;RAM RWX 0x20000000 0x40000"
+      macros="CMSIS_CONFIG_TOOL=C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external_tools/cmsisconfig/CMSIS_Configuration_Wizard.jar"
+      project_directory=""
+      project_type="Executable" />
+    <folder Name="nrf_cc310">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/nrf_cc310/lib/libnrf_cc310_0.9.10.a" />
+    </folder>
+    <folder Name="nRF_Crypto backend nRF HW">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/nrf_hw/nrf_hw_backend_init.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/nrf_hw/nrf_hw_backend_rng.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/nrf_hw/nrf_hw_backend_rng_mbedtls.c" />
+    </folder>
+    <folder Name="nRF_Crypto backend uECC">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/micro_ecc/micro_ecc_backend_ecc.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/micro_ecc/micro_ecc_backend_ecdh.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/micro_ecc/micro_ecc_backend_ecdsa.c" />
+    </folder>
+    <folder Name="nRF_Crypto backend mbed TLS">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/mbedtls/mbedtls_backend_aes.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/mbedtls/mbedtls_backend_aes_aead.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/mbedtls/mbedtls_backend_ecc.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/mbedtls/mbedtls_backend_ecdh.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/mbedtls/mbedtls_backend_ecdsa.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/mbedtls/mbedtls_backend_hash.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/mbedtls/mbedtls_backend_hmac.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/mbedtls/mbedtls_backend_init.c" />
+    </folder>
+    <folder Name="nRF_Drivers">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/integration/nrfx/legacy/nrf_drv_rng.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/integration/nrfx/legacy/nrf_drv_uart.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/prs/nrfx_prs.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/nrfx_rng.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/nrfx_uart.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/nrfx_uarte.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/integration/nrfx/legacy/nrf_drv_clock.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/nrfx_clock.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/nrfx_gpiote.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/nrfx_power_clock.c" />
+    </folder>
+    <folder Name="nRF_Crypto backend cifra">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cifra/cifra_backend_aes_aead.c" />
+    </folder>
+    <folder Name="nRF_Crypto">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_aead.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_aes.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_aes_shared.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_ecc.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_ecdh.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_ecdsa.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_eddsa.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_error.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_hash.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_hkdf.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_hmac.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_init.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_rng.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_shared.c" />
+    </folder>
+    <folder Name="nRF_micro-ecc">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/micro-ecc/nrf52hf_armgcc/armgcc/micro_ecc_lib_nrf52.a" />
+    </folder>
+    <folder Name="nRF_TLS">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/aes.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/aesni.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/arc4.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/asn1parse.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/nrf_tls/mbedtls/replacements/asn1write.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/base64.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/bignum.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/blowfish.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/camellia.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/ccm.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/certs.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/cipher.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/cipher_wrap.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/cmac.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/ctr_drbg.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/debug.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/des.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/dhm.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/ecdh.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/ecdsa.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/ecp.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/ecp_curves.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/entropy.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/entropy_poll.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/error.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/gcm.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/havege.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/hmac_drbg.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/md.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/md2.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/md4.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/md5.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/md_wrap.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/memory_buffer_alloc.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/oid.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/padlock.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/pem.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/pk.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/pk_wrap.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/pkcs11.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/pkcs12.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/pkcs5.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/pkparse.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/pkwrite.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/platform.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/ripemd160.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/rsa.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/sha1.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/sha256.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/sha512.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/ssl_cache.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/ssl_ciphersuites.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/ssl_cli.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/ssl_cookie.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/nrf_tls/mbedtls/replacements/ssl_srv.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/ssl_ticket.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/ssl_tls.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/threading.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/version.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/version_features.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/x509.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/x509_create.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/x509_crl.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/x509_crt.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/x509_csr.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/mbedtls/library/xtea.c" />
+    </folder>
+    <folder Name="nRF_Oberon_Crypto">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/nrf_oberon/lib/nrf52/liboberon_2.0.5.a" />
+    </folder>
+    <folder Name="nRF_Crypto backend CC310">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_aes.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_aes_aead.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_chacha_poly_aead.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_ecc.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_ecdh.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_ecdsa.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_eddsa.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_hash.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_hmac.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_init.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_mutex.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_rng.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_shared.c" />
+    </folder>
+    <folder Name="nRF_Crypto backend Oberon">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/oberon/oberon_backend_chacha_poly_aead.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/oberon/oberon_backend_ecc.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/oberon/oberon_backend_ecdh.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/oberon/oberon_backend_ecdsa.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/oberon/oberon_backend_eddsa.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/oberon/oberon_backend_hash.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/oberon/oberon_backend_hmac.c" />
+    </folder>
+    <folder Name="Segger Startup Files">
+      <file file_name="$(StudioDir)/source/thumb_crt0.s" />
+    </folder>
+    <folder Name="nRF_Log">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/log/src/nrf_log_backend_rtt.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/log/src/nrf_log_backend_serial.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/log/src/nrf_log_backend_uart.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/log/src/nrf_log_default_backends.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/log/src/nrf_log_frontend.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/log/src/nrf_log_str_formatter.c" />
+    </folder>
+    <folder Name="nRF_Libraries">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/button/app_button.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_error.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_error_handler_gcc.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_error_weak.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/scheduler/app_scheduler.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/timer/app_timer.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_util_platform.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/crc16/crc16.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/fds/fds.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/hardfault/hardfault_implementation.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/util/nrf_assert.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/atomic_fifo/nrf_atfifo.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/atomic_flags/nrf_atflags.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/atomic/nrf_atomic.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/balloc/nrf_balloc.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/fprintf/nrf_fprintf.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/fprintf/nrf_fprintf_format.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/fstorage/nrf_fstorage.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/fstorage/nrf_fstorage_sd.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/memobj/nrf_memobj.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/pwr_mgmt/nrf_pwr_mgmt.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/ringbuf/nrf_ringbuf.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/experimental_section_vars/nrf_section_iter.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/strerror/nrf_strerror.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/sensorsim/sensorsim.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/cifra_AES128-EAX/blockwise.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/cifra_AES128-EAX/cifra_cmac.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/cifra_AES128-EAX/cifra_eax_aes.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/cifra_AES128-EAX/eax.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/cifra_AES128-EAX/gf128.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/mem_manager/mem_manager.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/cifra_AES128-EAX/modes.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/queue/nrf_queue.c" />
+    </folder>
+    <folder Name="None">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/ses_startup_nrf52840.s" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/ses_startup_nrf_common.s" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/system_nrf52840.c" />
+    </folder>
+    <folder Name="Board Definition">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/boards/boards.c" />
+    </folder>
+    <folder Name="Board Support">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/bsp/bsp.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/libraries/bsp/bsp_btn_ble.c" />
+    </folder>
+    <folder Name="nRF_Segger_RTT">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/segger_rtt/SEGGER_RTT.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/segger_rtt/SEGGER_RTT_Syscalls_SES.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/segger_rtt/SEGGER_RTT_printf.c" />
+    </folder>
+    <folder Name="nRF_BLE">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/auth_status_tracker.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/common/ble_advdata.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/ble_advertising/ble_advertising.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/common/ble_conn_params.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/common/ble_conn_state.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/common/ble_srv_common.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/gatt_cache_manager.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/gatts_cache_manager.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/id_manager.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/nrf_ble_gatt/nrf_ble_gatt.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/nrf_ble_qwr/nrf_ble_qwr.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/peer_data_storage.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/peer_database.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/peer_id.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/peer_manager.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/peer_manager_handler.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/pm_buffer.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/security_dispatcher.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/security_manager.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/ble/nrf_ble_scan/nrf_ble_scan.c" />
+    </folder>
+    <folder Name="UTF8/UTF16 converter">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/external/utf_converter/utf.c" />
+    </folder>
+    <folder Name="nRF_SoftDevice">
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/softdevice/common/nrf_sdh.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/softdevice/common/nrf_sdh_ble.c" />
+      <file file_name="C:/Users/Rena Li/Desktop/nRF5_SDK_15.2.0_9412b96/components/softdevice/common/nrf_sdh_soc.c" />
+    </folder>
+    <folder Name="Application">
+      <file file_name="Application/main.c" />
+      <file file_name="Application/sdk_config.h" />
+      <folder Name="app-init-files">
+        <file file_name="Application/app-init-files/app_definitions.h" />
+        <file file_name="Application/app-init-files/app_initialization_functions.h" />
+      </folder>
+      <file file_name="Application/hardcoded-experimentation.c" />
+      <file file_name="Application/hardcoded-experimentation.h" />
+      <folder Name="ndn_standalone">
+        <file file_name="Application/ndn_standalone/ndn-constants.h" />
+        <file file_name="Application/ndn_standalone/ndn-enums.h" />
+        <file file_name="Application/ndn_standalone/ndn-error-code.h" />
+        <file file_name="Application/ndn_standalone/ndn-service.h" />
+        <folder Name="app-support">
+          <folder Name="bootstrapping">
+            <folder Name="secure-sign-on-files">
+              <folder Name="secure-sign-on">
+                <folder Name="tlv">
+                  <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/tlv/sign-on-basic-tlv-consts.h" />
+                  <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/tlv/sign-on-basic-tlv-helpers.c" />
+                  <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/tlv/sign-on-basic-tlv-helpers.h" />
+                  <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/tlv/sign-on-basic-tlv-impl-consts.h" />
+                </folder>
+                <folder Name="variants">
+                  <folder Name="basic">
+                    <folder Name="security">
+                      <folder Name="detail">
+                        <folder Name="detail-aes">
+                          <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/security/detail/detail-aes/aes-nrf-crypto-impl.c" />
+                          <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/security/detail/detail-aes/aes-nrf-crypto-impl.h" />
+                        </folder>
+                        <folder Name="detail-ecc">
+                          <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/security/detail/detail-ecc/ecc-microecc-impl.c" />
+                          <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/security/detail/detail-ecc/ecc-microecc-impl.h" />
+                          <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/security/detail/detail-ecc/ecc-nrf-crypto-impl.c" />
+                          <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/security/detail/detail-ecc/ecc-nrf-crypto-impl.h" />
+                        </folder>
+                        <folder Name="detail-hmac">
+                          <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/security/detail/detail-hmac/hmac-nrf-crypto-impl.c" />
+                          <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/security/detail/detail-hmac/hmac-nrf-crypto-impl.h" />
+                        </folder>
+                        <folder Name="detail-rng">
+                          <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/security/detail/detail-rng/rng-nrf-crypto-impl.c" />
+                          <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/security/detail/detail-rng/rng-nrf-crypto-impl.h" />
+                        </folder>
+                        <folder Name="detail-sha256">
+                          <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/security/detail/detail-sha256/sha256-nrf-crypto-impl.c" />
+                          <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/security/detail/detail-sha256/sha256-nrf-crypto-impl.h" />
+                        </folder>
+                        <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/security/detail/sec-impl.c" />
+                        <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/security/detail/sec-impl.h" />
+                      </folder>
+                    </folder>
+                    <folder Name="variants">
+                      <folder Name="ecc_256">
+                        <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/variants/ecc_256/sign-on-basic-ecc-256-consts.h" />
+                        <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/variants/ecc_256/sign-on-basic-ecc-256-sec.c" />
+                        <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/variants/ecc_256/sign-on-basic-ecc-256-sec.h" />
+                      </folder>
+                    </folder>
+                    <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/sign-on-basic-client.c" />
+                    <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/sign-on-basic-client.h" />
+                    <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/sign-on-basic-client-consts.h" />
+                    <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/sign-on-basic-consts.h" />
+                    <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/sign-on-basic-impl-consts.h" />
+                    <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/sign-on-basic-sec-intf-setter.c" />
+                    <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on/variants/basic/sign-on-basic-sec-intf-setter.h" />
+                  </folder>
+                </folder>
+              </folder>
+              <folder Name="secure-sign-on-nrf-sdk-ble">
+                <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on-nrf-sdk-ble/sign-on-basic-client-nrf-sdk-ble.c" />
+                <file file_name="Application/ndn_standalone/app-support/bootstrapping/secure-sign-on-files/secure-sign-on-nrf-sdk-ble/sign-on-basic-client-nrf-sdk-ble.h" />
+              </folder>
+            </folder>
+          </folder>
+          <file file_name="Application/ndn_standalone/app-support/access-control.c" />
+          <file file_name="Application/ndn_standalone/app-support/access-control.h" />
+          <file file_name="Application/ndn_standalone/app-support/bootstrapping.h" />
+          <file file_name="Application/ndn_standalone/app-support/service-discovery.c" />
+          <file file_name="Application/ndn_standalone/app-support/service-discovery.h" />
+        </folder>
+        <folder Name="adaptation">
+          <folder Name="ndn-nrf-ble-adaptation">
+            <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/logger.h" />
+            <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-consts.h" />
+            <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-error-check.h" />
+            <folder Name="nrf-sdk-ble-advertising">
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-advertising/nrf-sdk-ble-adv.c" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-advertising/nrf-sdk-ble-adv.h" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-advertising/nrf-sdk-ble-adv-defs.h" />
+            </folder>
+            <folder Name="nrf-sdk-ble-conn-params">
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-conn-params/nrf-sdk-ble-conn-params.c" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-conn-params/nrf-sdk-ble-conn-params.h" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-conn-params/nrf-sdk-ble-conn-params-defs.h" />
+            </folder>
+            <folder Name="nrf-sdk-ble-gap">
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-gap/nrf-sdk-ble-gap.c" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-gap/nrf-sdk-ble-gap.h" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-gap/nrf-sdk-ble-gap-defs.h" />
+            </folder>
+            <folder Name="nrf-sdk-ble-gatt">
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-gatt/nrf-sdk-ble-gatt.c" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-gatt/nrf-sdk-ble-gatt.h" />
+            </folder>
+            <folder Name="nrf-sdk-ndn-lite-ble-unicast-transport">
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-ndn-lite-ble-unicast-transport/nrf-sdk-ble-ndn-lite-ble-unicast-service.c" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-ndn-lite-ble-unicast-transport/nrf-sdk-ble-ndn-lite-ble-unicast-service.h" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-ndn-lite-ble-unicast-transport/nrf-sdk-ble-ndn-lite-ble-unicast-transport.c" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-ndn-lite-ble-unicast-transport/nrf-sdk-ble-ndn-lite-ble-unicast-transport.h" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-ndn-lite-ble-unicast-transport/nrf-sdk-ble-ndn-lite-ble-unicast-transport-defs.h" />
+            </folder>
+            <folder Name="nrf-sdk-ble-scanning">
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-scanning/nrf-sdk-ble-scan.c" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-scanning/nrf-sdk-ble-scan.h" />
+            </folder>
+            <folder Name="nrf-sdk-ble-stack">
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-stack/nrf-sdk-ble-stack.c" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-stack/nrf-sdk-ble-stack.h" />
+              <file file_name="Application/ndn_standalone/adaptation/ndn-nrf-ble-adaptation/nrf-sdk-ble-stack/nrf-sdk-ble-stack-defs.h" />
+            </folder>
+          </folder>
+        </folder>
+        <folder Name="encode">
+          <file file_name="Application/ndn_standalone/encode/data.c" />
+          <file file_name="Application/ndn_standalone/encode/data.h" />
+          <file file_name="Application/ndn_standalone/encode/decoder.c" />
+          <file file_name="Application/ndn_standalone/encode/decoder.h" />
+          <file file_name="Application/ndn_standalone/encode/encoder.c" />
+          <file file_name="Application/ndn_standalone/encode/encoder.h" />
+          <file file_name="Application/ndn_standalone/encode/fragmentation-support.h" />
+          <file file_name="Application/ndn_standalone/encode/interest.c" />
+          <file file_name="Application/ndn_standalone/encode/interest.h" />
+          <file file_name="Application/ndn_standalone/encode/metainfo.c" />
+          <file file_name="Application/ndn_standalone/encode/metainfo.h" />
+          <file file_name="Application/ndn_standalone/encode/name.c" />
+          <file file_name="Application/ndn_standalone/encode/name.h" />
+          <file file_name="Application/ndn_standalone/encode/name-component.c" />
+          <file file_name="Application/ndn_standalone/encode/name-component.h" />
+          <file file_name="Application/ndn_standalone/encode/signature.c" />
+          <file file_name="Application/ndn_standalone/encode/signature.h" />
+          <file file_name="Application/ndn_standalone/encode/signed-interest.c" />
+          <file file_name="Application/ndn_standalone/encode/signed-interest.h" />
+          <file file_name="Application/ndn_standalone/encode/tlv.h" />
+        </folder>
+        <folder Name="face">
+          <file file_name="Application/ndn_standalone/face/direct-face.c" />
+          <file file_name="Application/ndn_standalone/face/direct-face.h" />
+          <file file_name="Application/ndn_standalone/face/dummy-face.c" />
+          <file file_name="Application/ndn_standalone/face/dummy-face.h" />
+          <file file_name="Application/ndn_standalone/face/ndn-nrf-ble-face.c" />
+          <file file_name="Application/ndn_standalone/face/ndn-nrf-ble-face.h" />
+        </folder>
+        <folder Name="forwarder">
+          <file file_name="Application/ndn_standalone/forwarder/face.c" />
+          <file file_name="Application/ndn_standalone/forwarder/face.h" />
+          <file file_name="Application/ndn_standalone/forwarder/fib.h" />
+          <file file_name="Application/ndn_standalone/forwarder/forwarder.c" />
+          <file file_name="Application/ndn_standalone/forwarder/forwarder.h" />
+          <file file_name="Application/ndn_standalone/forwarder/memory-pool.c" />
+          <file file_name="Application/ndn_standalone/forwarder/memory-pool.h" />
+          <file file_name="Application/ndn_standalone/forwarder/pit.c" />
+          <file file_name="Application/ndn_standalone/forwarder/pit.h" />
+        </folder>
+        <folder Name="security">
+          <folder Name="detail">
+            <folder Name="detail-aes">
+              <file file_name="Application/ndn_standalone/security/detail/detail-aes/ndn-lite-aes-tinycrypt-impl.c" />
+              <file file_name="Application/ndn_standalone/security/detail/detail-aes/ndn-lite-aes-tinycrypt-impl.h" />
+            </folder>
+            <folder Name="detail-ecc">
+              <file file_name="Application/ndn_standalone/security/detail/detail-ecc/ndn-lite-ecc-microecc-impl.c" />
+              <file file_name="Application/ndn_standalone/security/detail/detail-ecc/ndn-lite-ecc-microecc-impl.h" />
+            </folder>
+            <folder Name="detail-hmac">
+              <file file_name="Application/ndn_standalone/security/detail/detail-hmac/ndn-lite-hmac-tinycrypt-impl.c" />
+              <file file_name="Application/ndn_standalone/security/detail/detail-hmac/ndn-lite-hmac-tinycrypt-impl.h" />
+            </folder>
+            <folder Name="detail-sha256">
+              <file file_name="Application/ndn_standalone/security/detail/detail-sha256/ndn-lite-sha256-nrf-crypto-impl.c" />
+              <file file_name="Application/ndn_standalone/security/detail/detail-sha256/ndn-lite-sha256-nrf-crypto-impl.h" />
+              <file file_name="Application/ndn_standalone/security/detail/detail-sha256/ndn-lite-sha256-tinycrypt-impl.c" />
+              <file file_name="Application/ndn_standalone/security/detail/detail-sha256/ndn-lite-sha256-tinycrypt-impl.h" />
+            </folder>
+            <folder Name="detail-rng">
+              <file file_name="Application/ndn_standalone/security/detail/detail-rng/ndn-lite-rng-nrf-crypto-impl.c" />
+              <file file_name="Application/ndn_standalone/security/detail/detail-rng/ndn-lite-rng-nrf-crypto-impl.h" />
+              <file file_name="Application/ndn_standalone/security/detail/detail-rng/ndn-lite-rng-tinycrypt-impl.c" />
+              <file file_name="Application/ndn_standalone/security/detail/detail-rng/ndn-lite-rng-tinycrypt-impl.h" />
+            </folder>
+            <file file_name="Application/ndn_standalone/security/ndn-lite-aes.c" />
+            <file file_name="Application/ndn_standalone/security/ndn-lite-aes.h" />
+            <file file_name="Application/ndn_standalone/security/ndn-lite-crypto-key.c" />
+            <file file_name="Application/ndn_standalone/security/ndn-lite-crypto-key.h" />
+            <file file_name="Application/ndn_standalone/security/ndn-lite-key-storage.c" />
+            <file file_name="Application/ndn_standalone/security/ndn-lite-key-storage.h" />
+            <file file_name="Application/ndn_standalone/security/ndn-lite-random.c" />
+            <file file_name="Application/ndn_standalone/security/ndn-lite-random.h" />
+            <file file_name="Application/ndn_standalone/security/ndn-lite-sec-config.h" />
+            <file file_name="Application/ndn_standalone/security/ndn-lite-sign-verify.c" />
+            <file file_name="Application/ndn_standalone/security/ndn-lite-sign-verify.h" />
+            <folder Name="sec-lib">
+              <folder Name="micro-ecc">
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/micro-ecc/asm_arm.inc" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/micro-ecc/asm_arm_mult_square.inc" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/micro-ecc/asm_avr.inc" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/micro-ecc/asm_avr_mult_square.inc" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/micro-ecc/curve-specific.inc" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/micro-ecc/platform-specific.inc" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/micro-ecc/types.h" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/micro-ecc/uECC.c" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/micro-ecc/uECC.h" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/micro-ecc/uECC_vli.h" />
+              </folder>
+              <folder Name="tinycript">
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_aes.h" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_aes_decrypt.c" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_aes_encrypt.c" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_cbc_mode.c" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_cbc_mode.h" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_ccm_mode.c" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_ccm_mode.h" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_cmac_mode.c" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_cmac_mode.h" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_constants.h" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_ctr_mode.c" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_ctr_mode.h" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_ctr_prng.c" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_ctr_prng.h" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_ecc.c" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_ecc.h" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_ecc_dh.c" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_ecc_dh.h" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_ecc_dsa.c" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_ecc_dsa.h" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_ecc_platform_specific.c" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_ecc_platform_specific.h" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_hmac.c" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_hmac.h" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_hmac_prng.c" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_hmac_prng.h" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_sha256.c" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_sha256.h" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_utils.c" />
+                <file file_name="Application/ndn_standalone/security/detail/sec-lib/tinycrypt/tc_utils.h" />
+              </folder>
+            </folder>
+          </folder>
+        </folder>
+      </folder>
+    </folder>
+  </project>
+</solution>

@@ -234,7 +234,8 @@ public class SecurityHelpers {
     public static byte[] encryptAesCbcPkcs5Padding(byte[] data, byte[] keyBytes) throws Exception {
         try {
             LogByteArrayDebug(TAG, "Bytes being encrypted: ", data);
-            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+            //Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+            Cipher cipher = Cipher.getInstance("AES_128/CBC/NoPadding");
             SecretKeySpec secretKeySpec = new SecretKeySpec(keyBytes, "AES");
             byte[] empty = new byte[16];
             for (int i = 0; i < 16; i++) {
