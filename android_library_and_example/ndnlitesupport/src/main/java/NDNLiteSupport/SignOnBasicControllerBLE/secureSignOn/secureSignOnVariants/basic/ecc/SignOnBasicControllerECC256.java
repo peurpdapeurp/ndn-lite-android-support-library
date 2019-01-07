@@ -18,6 +18,7 @@ import java.security.PublicKey;
 import java.security.spec.InvalidKeySpecException;
 
 import NDNLiteSupport.SignOnBasicControllerBLE.secureSignOn.secureSignOnVariants.SecureSignOnVariantStrings;
+import NDNLiteSupport.SignOnBasicControllerBLE.secureSignOn.utils.ASNEncodingHelpers;
 import NDNLiteSupport.SignOnBasicControllerBLE.secureSignOn.utils.EncodingHelpers;
 import NDNLiteSupport.SignOnBasicControllerBLE.secureSignOn.utils.SecurityHelpers;
 
@@ -220,7 +221,11 @@ public class SignOnBasicControllerECC256 extends SignOnBasicController {
         Blob digestOfCertificateRequestBlob = new Blob(digestOfSignaturePayload);
         LogHelpers.LogDebug(TAG, "Hex string of signed portion hash: " + digestOfCertificateRequestBlob.toHex());
 
-        if (!SecurityHelpers.verifySignatureECC(publicKey, signature, signaturePayload)) {
+        byte[] asnEncodedSignature = ASNEncodingHelpers.asnEncodeRawECDSASignature(signature);
+
+        LogHelpers.LogByteArrayDebug(TAG, "Hex string of asn encoded signature:", asnEncodedSignature);
+
+        if (!SecurityHelpers.verifySignatureECC(publicKey, asnEncodedSignature, signaturePayload)) {
             return false;
         }
 

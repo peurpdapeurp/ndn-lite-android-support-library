@@ -9,6 +9,7 @@ import net.named_data.jndn.util.Blob;
 
 import org.spongycastle.asn1.ASN1InputStream;
 import org.spongycastle.asn1.ASN1Sequence;
+import org.spongycastle.crypto.DataLengthException;
 import org.spongycastle.jcajce.provider.asymmetric.rsa.BCRSAPrivateKey;
 import org.spongycastle.jcajce.provider.asymmetric.rsa.BCRSAPublicKey;
 import org.spongycastle.jce.ECNamedCurveTable;
@@ -35,6 +36,7 @@ import java.security.spec.ECPoint;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
+import java.util.Arrays;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyAgreement;
