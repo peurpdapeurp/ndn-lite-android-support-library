@@ -170,9 +170,7 @@ public class SignOnBasicControllerBLE {
 
                     m_deviceIdentifierHexStringToMacAddress.put(processResult.deviceIdentifierHexString, gatt.getDevice().getAddress());
 
-                    switch(processResult.signOnMessageTlvType) {
-                        case SECURE_SIGN_ON_BLE_BOOTSTRAPPING_REQUEST_TLV_TYPE: {
-
+                    if (processResult.signOnMessageTlvType == SECURE_SIGN_ON_BLE_BOOTSTRAPPING_REQUEST_TLV_TYPE) {
                             String deviceMacAddress = gatt.getDevice().getAddress();
                             if (m_successfullyNegotiatedMtuDevices.contains(deviceMacAddress)) {
                                 LogHelpers.LogDebug(TAG, "Got a bootstrapping request when " +
@@ -190,28 +188,23 @@ public class SignOnBasicControllerBLE {
                                         new BootstrappingRequestInfo(data, processResult, serviceUuid));
                             }
 
-                            break;
-                        }
-                        case SECURE_SIGN_ON_BLE_CERTIFICATE_REQUEST_TLV_TYPE: {
-
+                    }
+                    else if (processResult.signOnMessageTlvType == SECURE_SIGN_ON_BLE_CERTIFICATE_REQUEST_TLV_TYPE) {
                             respondToCertificateRequest(processResult, serviceUuid,
                                     gatt.getDevice().getAddress());
 
-                            break;
-                        }
-                        case SECURE_SIGN_ON_BLE_FINISH_MESSAGE_TLV_TYPE: {
+                    }
+                    else if (processResult.signOnMessageTlvType == SECURE_SIGN_ON_BLE_FINISH_MESSAGE_TLV_TYPE) {
 
                             LogHelpers.LogDebug(TAG, "Finished processing sign on ble finish message for device with deviceIdentifierHexString: " +
-                                    processResult.deviceIdentifierHexString);
+                                processResult.deviceIdentifierHexString);
 
                             m_callbacks.onDeviceSignOnComplete(processResult.deviceIdentifierHexString);
-
-                            break;
-                        }
-                        default: {
+                    }
+                    else {
                             Log.e(TAG, "Got an unexpected sign on message type: " + processResult.signOnMessageTlvType);
                             m_callbacks.onDeviceSignOnError(processResult.deviceIdentifierHexString, processResult.resultCode);
-                        }
+
                     }
                 }
             }

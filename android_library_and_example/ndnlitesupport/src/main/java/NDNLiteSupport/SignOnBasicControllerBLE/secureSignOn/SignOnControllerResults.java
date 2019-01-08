@@ -4,7 +4,7 @@ public class SignOnControllerResults {
 
     public static class ProcessSignOnMessageResult {
         public ProcessSignOnMessageResult(SignOnControllerResultCodes.SignOnControllerResultCode resultCode,
-                                          int signOnMessageTlvType,
+                                          long signOnMessageTlvType,
                                           String deviceIdentifierHexString) {
             this.resultCode = resultCode;
             this.signOnMessageTlvType = signOnMessageTlvType;
@@ -12,7 +12,7 @@ public class SignOnControllerResults {
         }
 
         public ProcessSignOnMessageResult(SignOnControllerResultCodes.SignOnControllerResultCode resultCode,
-                                          int signOnMessageTlvType) {
+                                          long signOnMessageTlvType) {
             this.resultCode = resultCode;
             this.signOnMessageTlvType = signOnMessageTlvType;
         }
@@ -28,7 +28,7 @@ public class SignOnControllerResults {
         }
 
         public SignOnControllerResultCodes.SignOnControllerResultCode resultCode;
-        public int signOnMessageTlvType;
+        public long signOnMessageTlvType;
         public String deviceIdentifierHexString;
     }
 

@@ -159,10 +159,12 @@ public abstract class SignOnController {
 
         LogHelpers.LogByteArrayDebug(TAG, "Raw bytes of sign-on message being processed:", data);
 
-        int signOnMessageType = data[0];
+        long signOnMessageType =  Byte.toUnsignedInt(data[0]);
 
-        switch (signOnMessageType) {
-            case SECURE_SIGN_ON_BLE_BOOTSTRAPPING_REQUEST_TLV_TYPE: {
+        LogHelpers.LogDebug(TAG, "Value of first byte of potential sign on message: " + signOnMessageType);
+
+        if (signOnMessageType == SECURE_SIGN_ON_BLE_BOOTSTRAPPING_REQUEST_TLV_TYPE) {
+
                 LogHelpers.LogDebug(TAG, "Received a bootstrapping request.");
 
                 SignOnControllerResults.ProcessSignOnMessageResult processResult = processBootstrappingRequest(data);
@@ -176,8 +178,9 @@ public abstract class SignOnController {
                         signOnMessageType,
                         processResult.deviceIdentifierHexString
                 );
-            }
-            case SECURE_SIGN_ON_BLE_CERTIFICATE_REQUEST_TLV_TYPE: {
+        }
+        else if (signOnMessageType == SECURE_SIGN_ON_BLE_CERTIFICATE_REQUEST_TLV_TYPE) {
+
                 LogHelpers.LogDebug(TAG, "Received a certificate request.");
 
                 SignOnControllerResults.ProcessSignOnMessageResult processResult = processCertificateRequest(data);
@@ -191,8 +194,8 @@ public abstract class SignOnController {
                         signOnMessageType,
                         processResult.deviceIdentifierHexString
                 );
-            }
-            case SECURE_SIGN_ON_BLE_FINISH_MESSAGE_TLV_TYPE: {
+        }
+        else if (signOnMessageType == SECURE_SIGN_ON_BLE_FINISH_MESSAGE_TLV_TYPE) {
                 LogHelpers.LogDebug(TAG, "Received a finish message.");
 
                 SignOnControllerResults.ProcessSignOnMessageResult processResult = processFinishMessage(data);
@@ -210,13 +213,12 @@ public abstract class SignOnController {
                         signOnMessageType,
                         processResult.deviceIdentifierHexString
                 );
-            }
-            default: {
+        }
+        else {
                 return new SignOnControllerResults.ProcessSignOnMessageResult(
                         SignOnControllerResultCodes.SignOnControllerResultCode.ERROR_PROCESSING_UNRECOGNIZED_MESSAGE_TYPE,
                         data[0]
                 );
-            }
         }
     }
 

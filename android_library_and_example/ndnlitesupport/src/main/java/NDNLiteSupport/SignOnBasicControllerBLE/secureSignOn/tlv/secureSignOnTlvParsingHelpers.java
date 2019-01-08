@@ -20,7 +20,7 @@ public class secureSignOnTlvParsingHelpers {
         int i = 0;
 
         while (i < tlvBlock.length) {
-            int currentTlvType = tlvBlock[i];
+            int currentTlvType = Byte.toUnsignedInt(tlvBlock[i]);
             int currentTlvLength = Byte.toUnsignedInt(tlvBlock[i+1]);
             // LogHelpers.LogDebug(TAG, "Current tlv type: " + currentTlvType);
             // LogHelpers.LogDebug(TAG, "Current tlv length: " + currentTlvLength);
